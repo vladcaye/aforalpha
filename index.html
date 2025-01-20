@@ -104,7 +104,13 @@ a:active {
           verify: { projectID: '678d92d34e984c4ee9b293b7' },
           url: 'https://general-runtime.voiceflow.com',
           versionID: 'production'
-        });
+        }).then(() => {
+		window.voiceflow.chat.proactive.clear();
+		window.voiceflow.chat.proactive.push({
+			type: 'text',
+			payload: { message: '21 days to build your business challenge is on. 🔥🔥🔥'}
+		});
+	});
       }
       v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
   })(document, 'script');
